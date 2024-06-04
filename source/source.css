@@ -1,0 +1,155 @@
+.text-red {
+    color: red;
+}
+.text-black {
+    color: black;
+}
+.text-yellow{
+    color: yellow;
+}
+.sidebar{
+    width: 252px;
+    background-color: #fff;
+    min-width: 252px; 
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    box-shadow: 2px 8px 12px #4644443b;
+    padding: 16px 12px;
+    transition: 0.2s linear;
+}
+.main{
+    background-color: #f7f7f7;
+    width: 100%;
+    height: 200vh;
+}
+/* main= 100% - sidebar = 100% -250px*/
+.brand-logo{
+    height: 80px;
+}
+.list-navigator{
+    list-style-type: none;
+    padding: 0px;
+}
+.nav-group-name{
+    color: #808184;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 12px;
+    font-family: 500;
+}
+.nav-link{
+    display: flex;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 2px;
+    border-radius: 8px;
+    gap: 8px;
+    align-items: center;
+    transition: 0.2 linear;
+    cursor: pointer;
+}
+.nav-link:hover{
+   background-color: #95969b49;
+}
+.nav-image{
+    height: 24px;
+}
+.nav-active{
+    background-color: rgb(12, 185, 197);
+    color: white;
+    font-weight: 600;
+}
+.nav-active.nav-image{
+    filter:invert(1)
+}
+.mini-sidebar{
+    width: 64px;
+    min-width: 64px;
+}
+.mini-sidebar.nav-group-name{
+    display: none;
+}
+.mini-sidebar.nav-display-name{
+    display: none;
+}
+.mini-sidebar .nav-link{
+    justify-content: center;
+}
+.mini-sidebar.brand-logo{
+    height: 52px;
+}
+.product-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+.product-attribule{
+    font-size: 14px;
+}
+.view-icon{
+    height: 18px;
+}
+.view-icon-warper{
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 12px;
+    background-color: #b9b9b953;
+    backdrop-filter: blur(1px);
+    transition: 0.1s ease;
+    transform: translateX(50px);
+}
+.view-icon-warper:hover{
+    background-color: black;
+}
+.prodcut-card{
+    overflow: hidden;
+}
+.view-icon-warper:hover .view-icon{
+    filter: invert(1);
+}
+
+/* Luon xet max width va max height cho anh to tren web
+max-width 90vw
+max-height 90 vh
+.full-size-img{
+    width: 100%;
+    height: 100%;}*/
+.input-block, .comment-block{
+    padding: 12px 16px;
+    border: 1px solid #b6b6b6;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.input-label{
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+.comment-block{
+    height: 72px;
+}
+.form-container{
+    max-width: 500px;
+    margin:auto;
+}
+.btn-submit{
+    display: block;
+    width: 80%;
+    margin: auto;
+    padding: 12px;
+    background-color: aqua;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+}
+.error-border{
+    border-color: red;
+}
+

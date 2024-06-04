@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Thẻ p ở HTML -->
+<p id='#pTest1' class='text-demo-2 p-tag-01'>Tôi là thẻ p số 1</p>
+<div>
+	<p id='#pTest2' class='text-demo-2 p-tag-02'>Tôi là thẻ p số 2</p>
+	<p id='#pTest3' class='text-demo p-tag-03'>Tôi là thẻ p số 3</p>		
+</div>
+
+</body>
+<script>
+    
+const myPTag = document.querySelectorAll('.text-demo-2');
+console.log(myPTag); // [p, p, p]
+// selector ở đây là '.text-demo' tương ứng với các thẻ có chứa class là '.text-demo'
+// => trả ra mảng các thẻ thoả mãn
+const firstPTag = document.querySelector('.text-demo-2');
+console.log(firstPTag);
+// vẫn là selector như trên nhưng lúc này ta dùng phương thức querySelector
+// => trả ra phần tử đầu tiên thoả mãn
+
+</script>
+</html>
+
+

@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./source/source2.css">
+</head>
+<body>
+    <button id ='myFirstBtn'>Login</button> 
+    <div id = 'modalExample' class="modal">
+        <div class="modal-content ">
+        
+        <div class="model-title d-flex justify-content-between align-items-center">
+            <h3>Modal title</h3>
+            <span>x</span>
+        </div>
+        <div class="content">
+           <p> Toi la Duc </p>
+        </div>  
+        <button onclick="closeModal()">Close</button>
+        <button>Save changes</button>
+        </div>
+    </div> 
+
+</body>
+<script>
+    function closeModal(){
+        const target = document.querySelector('#modalExample')
+        if(target) {
+            target.classList.add('modal-none')
+        }
+    }
+    function openModal(){
+        const target = document.querySelector('#modalExample')
+        if(target) {
+            target.classList.remove('modal-none')
+        }
+    }
+    const myBtn = document.querySelector('#myFirstBtn');
+    console.log(myBtn);
+    if(myBtn) {
+        myBtn.addEventListener('click', function(){
+        const target = document.querySelector('#modalExample')
+        if(target) {
+            target.classList.remove('modal-none')
+        }
+    }
+        )}
+</script>
+
+</html>

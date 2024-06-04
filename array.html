@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   // const arrayOfNumber = [ 1, 2, 100, 9, 44, -1 ];
+    //const arrayOfChaos = [ 'abc', null, true, 1, {name: 'example'}, arrayOfNumber ];			
+    //console.log (arrayOfChaos[0]);
+    //console.log ('CREATE');
+    //arrayOfChaos.push('Anh Tuan');
+   // console.log(arrayOfChaos);
+   // if (!arrayOfNumber.length) {
+        //console.log('Mang rong');
+    //} else {
+      //  console.log('Mang khong rong')
+    //}
+    //console.log(arrayOfChaos);
+    //console.log('UPDATE');
+    //arrayOfChaos[0] = 'def';
+    // index: 0; vi tri xoa
+    // count: 1; so luong phan tu muon xoa;
+    // newValue: 'def', phan tu thay the;
+    //arrayOfChaos.splice(0, 1, 'def');
+    //console.log(arrayOfChaos);
+    const myArray = [20,5,24,99];
+    const anotherArray = [];
+
+   /* const cloneArray = myArray.map(function(item, index, array){
+        console.log(`item:${item}`);
+        console.log(`new item:${item+10}`);
+        console.log(`============`);
+       //console.log(`Chỉ số phần tử hiện tại là: ${item}`);
+       //console.log(`Giá trị phần tử hiện tại là: ${index}`);
+        //console.log('====================');
+
+        /*if (index === 0) {
+        console.log(`phần tử đầu là:${item}`);
+        console.log(`Vi tri phan tu dau la:${index}`);}
+
+        else if (index === array.length-1) {
+        console.log(`phần tử cuối là:${item}`);
+        console.log(`Vi tri phan tu cuoi la:${index}`);
+        } */
+
+        //anotherArray.push(item);
+    //})
+  //console.log(`Array moi cua minh ` + myArray);
+
+    const userGenerlist = [
+        {gender: null},
+        {gender: 'male'},
+        {gender: 'female'},
+        {gender: null},
+        {gender: 'female'},
+    ]
+
+    const mappedGender = userGenerlist.map(function(item, index, array){
+        switch (item.gender) {
+            case null:
+                return 'Chua khai bao';
+                break;
+            case 'male':
+                return 'Nam';
+                break;
+            case 'female':
+                return 'Nu';
+            default:
+                return ' ';
+// if (item.gender === null) {
+  //  return 'Chua khai bao'; }
+  //  if (item.gender === 'male') {
+    //return 'Nam'; }
+   // if (item.gender === female) {}
+    //return 'Nu';}
+   // else {
+    //return 'Chua khai bao';}
+}
+        });
+const listData = [
+		{ id: 1, name: 'Tai nghe Sony WF-1000XM4', price: 2990000 , category: {id:1, name: 'Tai nghe in-ear'}, quantity: 40},
+		{ id: 2, name: 'Tai nghe Sony WH-1000XM4', price: 6690000, category: {id:2, name: 'Tai nghe over-ear'}, quantity: 23 },
+		{ id: 3, name: 'Tai nghe không dây WH-CH510', price: 1190000, category: {id:2, name: 'Tai nghe over-ear'}, quantity: 88 },
+		{ id: 4, name: 'Tai nghe chống ồn WH-1000XM5', price: 6490000, category: {id:2, name: 'Tai nghe over-ear'}, quantity: 12 },
+		{ id: 5, name: 'Loa đeo cổ không dây SRS-NS7', price: 6990000, category: {id:3, name: 'Loa'}, quantity: 1 },
+];
+
+const DucArray = listData.filter(function(item,index,array) {
+     return item.price >= 5000000;
+})
+console.log(DucArray);
+
+const DanArray = listData.filter(function(item,index,array) {
+     return item.price >= 1000000 && item.price <5000000;
+     return item.category.id ===2;
+})
+console.log(DanArray);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./source/source.css">
+    <link rel="stylesheet" href="./source/source2.css">
+    <link rel="stylesheet" href="./source/style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Liên hệ</h1>
+
+        <form id="formContainer" class="form-container">
+            <div class="form-input-block">
+                <label for= "fullname" class="d-blog  input-label">Tên của bạn</label>
+                <input id="fullname" class="input-block d-blog" type= "text" placeholder="Nhập họ và tên">
+            </div>
+            <div class="form-input-block">
+                <label for= "phone" class="d-blog  input-label">Số điện thoại liên hệ</label>
+                <input id="phone" class="input-block d-blog" type= "text" placeholder="Nhập số điện thoại">
+            </div>
+            <div class="form-input-block">
+                <label for= "comments" class="d-blog  input-label">Ý kiến của bạn</label>
+                <textarea class="comment-blog input-block d-blog" id="comments" name="" placeholder="Gửi ý kiến của bạn"></textarea>
+            </div>
+            <div>
+                <button class="btn-submit">Gửi</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="my-custom-chat-plugin">
+        <div class="chat-header">
+            <p class="group-name">
+                Doi khong nhu mo.
+            </p>
+        <div class="chat-body">
+            <div class="msg partner-msg">
+                Di choi khong bro.
+            </div>
+            <div class="msg my-msg">
+                di chu.
+            </div>
+        </div>
+
+
+    </div>
+    <div class="typing block">
+        <form class="d-flex items-center">
+            <textarea id ='my-msg' placeholder="Nhap tin nhan..."></textarea>
+            <button class="btn-submit-msg">Gui</button>
+        </form>
+    </div>
+
+</body>
+<script>
+    const formContainer =document.querySelector('#formContainer');
+    const fullname = document.querySelector('#fullname');
+    const num = document.querySelector('#phone');
+    const comments = document.querySelector('#comments');
+    console.log(formContainer);
+    formContainer.addEventListener('submit', function(event){
+        event.preventDefault();
+        const currentFailed = [];
+        if(!fullname.value.trim()) {
+            currentFailed.push('name')
+        }
+        if(!phone.value.trim() || phone.value.trim().length < 9) {
+            currentFailed.push('phone')
+        }
+        if(!comments.value.trim() || phone.value.trim().length < 50 || phone.value.trim().length > 200) {
+            currentFailed.push('comments')
+        }
+        if(currentFailed.length) {
+            alert('Vui long dien day du thong tin')
+        }
+        else{
+            alert('Gui thong tin thanh cong, cam on ban')
+        }
+    })
+    console.log(fullname.value)
+    const listRoomMsg = [{
+        id: 1,
+        isMe: false,
+        content: 'Di choi khong bro.'
+    },
+    {
+        id:2,
+        isMe: true,
+        content: 'di chu.'
+    },
+    ]
+    function renderMsgFromData(msgData) {
+        return `<div class ="msg ${msgData.isMe ? 'my-msg': 'partner-msg'}">${msgData.content}</div>`
+    }
+   
+   function renderListData(){
+    let str = " ";
+    listRoomMsg.forEach(item =>{
+        str += renderMsgFromData(item);
+    });
+    chat.Body1.innerHTML = str;
+   }
+   renderListData();
+   const formMsg = document.querySelector('#formMsg');
+   const myText = document.querySelector('#my-msg');
+   formMsg.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    if (myText.value.trim()) {
+        const msg = myText.value
+        myText.value = ""
+        const objMsg = {
+            id: new Date().getTime(),
+            isMe: true,
+            content: myText.value
+        }
+        listRoomMsg.push(objMsg);
+        renderListData();
+    }
+   }
+   )
+</script>
+</html>

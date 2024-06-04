@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./source/source.css">
+</head>
+<body>
+    <h1 id="s2">Javascript 02</h1>
+    <h1 id="s1">Javascript 01</h1>
+    <button onclick="ChangeTextColor" class="text-red">Add</button>
+    <button onclick="ChangeBlack" class="text-black">Remove</button>
+    <button onclick="ChangeYellow">Toggle</button>
+<script>
+/*const myTarget = document.querySelector('#s1');
+console.log(myTarget);
+if (myTarget) {
+    console.log(myTarget.outerText);
+}*/
+function ChangeTextColor() {
+    const myTarget = document.querySelector('#s1');
+    if (myTarget) {
+        // Them class thong qua method add
+        myTarget.classList.add('text-red');
+    }
+}
+function ChangeBlack() {
+    const myTarget = document.querySelector('#s1');
+    if (myTarget) {
+        // Them class thong qua method add
+        myTarget.classList.remove('text-red');
+    }
+}
+function ChangeYellow() {
+    const myTarget = document.querySelector('#s1');
+    if (myTarget) {
+        // Them class thong qua method add
+        myTarget.classList.toggle('text-yellow');
+    }
+}
+ChangeTextColor();
+ChangeBlack();
+ChangeYellow();
+</script>
+</body>
+</html>

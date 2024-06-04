@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="my-wish" name ='the p so 1'> Play game</p>
+    <p class="my-wish" name ='the p so 2'>Sleeping</p>
+    
+
+</body>
+<script>
+    const listPTag = document.querySelectorAll('.my-wish')
+    listPTag.forEach(function(item, index){
+        item.addEventListener('click',function(){
+            const itemName = item.getAttribute('name')
+            console.log(itemName)
+        })
+    })
+</script>
+</html>
